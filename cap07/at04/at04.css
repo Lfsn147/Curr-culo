@@ -1,0 +1,214 @@
+:root {
+  --cor-primaria: #3498db;
+  --cor-primaria-hover: #2980b9;
+  --cor-fundo: #ffffff;
+  --cor-fundo-pagina: #f5f7fa;
+  --cor-texto: #2c3e50;
+  --cor-texto-claro: #7f8c8d;
+  --cor-selo: #e74c3c;
+  
+  --altura-nav: 60px;
+  --espaco-md: 1rem;
+  --espaco-lg: 2rem;
+  --raio-borda: 8px;
+  --raio-circulo: 9999px;
+  
+  --z-nav: 1000;
+  --z-btn-topo: 999;
+  --z-tooltip: 500;
+  --z-sticky: 100;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-texto);
+  line-height: 1.7;
+}
+
+.nav-fixa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--altura-nav);
+  z-index: var(--z-nav);
+  background-color: var(--cor-texto);
+  color: var(--cor-fundo);
+  padding: 0 var(--espaco-lg);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-conteudo {
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-conteudo .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-conteudo ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-conteudo a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-conteudo a:hover {
+  color: var(--cor-primaria);
+}
+
+.conteudo-principal {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: calc(var(--altura-nav) + var(--espaco-lg));
+  padding-bottom: var(--espaco-lg);
+  padding-left: var(--espaco-md);
+  padding-right: var(--espaco-md);
+}
+
+section {
+  background-color: var(--cor-fundo);
+  padding: var(--espaco-lg);
+  margin-bottom: var(--espaco-lg);
+  border-radius: var(--raio-borda);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+section p {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+  margin-bottom: var(--espaco-md);
+}
+
+.titulo-sticky {
+  position: sticky;
+  top: var(--altura-nav);
+  z-index: var(--z-sticky);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  padding: var(--espaco-md) 0;
+  margin-bottom: var(--espaco-md);
+  border-bottom: 2px solid var(--cor-fundo-pagina);
+  font-size: clamp(1.4rem, 1.3rem + 0.5vw, 1.8rem);
+}
+
+.cartao-destaque {
+  position: relative;
+  background-color: var(--cor-fundo-pagina);
+  border: 2px solid #e2e8f0;
+  padding: var(--espaco-lg);
+  margin: calc(var(--espaco-lg) * 1.5) 0;
+  border-radius: var(--raio-borda);
+}
+
+.cartao-destaque h3 {
+  margin-bottom: 0.5rem;
+}
+
+.cartao-destaque .selo {
+  position: absolute;
+  top: -12px;
+  right: 15px;
+  background-color: var(--cor-selo);
+  color: var(--cor-fundo);
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: var(--raio-circulo);
+  box-shadow: 0 2px 5px rgba(231, 76, 60, 0.4);
+}
+
+.btn-topo {
+  position: fixed;
+  bottom: var(--espaco-lg);
+  right: var(--espaco-lg);
+  z-index: var(--z-btn-topo);
+  width: 45px;
+  height: 45px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--raio-circulo);
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-topo:hover {
+  background-color: var(--cor-primaria-hover);
+  transform: translateY(-3px);
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  border-bottom: 1px dashed var(--cor-primaria);
+  cursor: help;
+}
+
+.tooltip-texto {
+  visibility: hidden;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: normal;
+  white-space: nowrap;
+  z-index: var(--z-tooltip);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.tooltip-texto::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #2c3e50 transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-texto {
+  visibility: visible;
+  opacity: 1;
+}

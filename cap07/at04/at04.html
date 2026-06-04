@@ -1,0 +1,71 @@
+HTML
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWEB1 — Cap. 07 — AT04 — Página com Posicionamento</title>
+    <link rel="stylesheet" href="at04.css" />
+</head>
+<body id="topo">
+
+    <nav class="nav-fixa">
+        <div class="nav-conteudo">
+            <span class="logo">WebDev Posicionamento</span>
+            <ul>
+                <li><a href="#secao1">Introdução</a></li>
+                <li><a href="#secao2">Destaques</a></li>
+                <li><a href="#secao3">Conclusão</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="conteudo-principal">
+
+        <section id="secao1">
+            <h2 class="titulo-sticky">Seção 1: Fundamentos do CSS Position</h2>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec ex pretium, scelerisque magna sit amet, accumsan turpis. Donec sit amet est id velit lacinia vestibulum. Ut sed felis eget ex convallis efficitur. Integer cursus pellentesque justo vel scelerisque. Curabitur vel tristique mi, ut venenatis ex. Aliquam non iaculis massa.</p>
+            
+            <p>
+                No desenvolvimento moderno, passe o mouse sobre 
+                <span class="tooltip-container">
+                    esta palavra
+                    <span class="tooltip-texto">Esta é a dica de contexto!</span>
+                </span> 
+                para compreender como um elemento absoluto se ancora a um ancestral relativo.
+            </p>
+
+            <p>In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam sit amet leo dolor. Suspendisse pulvinar erat a nisl consectetur tristique. Pellentesque consequat nisl sit amet hendrerit scelerisque.</p>
+            <p>Nullam efficitur felis at elementum pellentesque. Proin nec convallis ligula, vitae pharetra lacus. Ut iaculis nulla vel nisl dictum pretium. Cras scelerisque tempus convallis. Sed accumsan ex lectus, sit amet pretium leo imperdiet vitae.</p>
+        </section>
+
+        <section id="secao2">
+            <h2 class="titulo-sticky">Seção 2: Casos de Uso Práticos</h2>
+            
+            <p>Mauris luctus consequat nunc, quis iaculis erat congue a. Sed feugiat tincidunt dolor sed tempus. Duis accumsan leo nec mollis scelerisque. Morbi ultrices lorem ac nulla imperdiet elementum.</p>
+
+            <article class="cartao-destaque">
+                <span class="selo">NOVO</span>
+                <h3>Título do cartão</h3>
+                <p>Descrição do item em destaque. Este cartão possui posicionamento relativo para servir como ponto de ancoragem espacial do elemento filho absoluto que renderiza o selo no canto superior direito.</p>
+            </article>
+
+            <p>Quisque non nulla ac justo sodales vulputate. Proin interdum condimentum ante. Sed in ex volutpat, gravida neque vitae, elementum nisi. Proin ut tincidunt erat, in euismod dolor. Ut feugiat lectus vel diam consequat facilisis. In hac habitasse platea dictumst.</p>
+            <p>Nam eget ex sit amet neque lobortis tincidunt. Proin accumsan elit ut finibus elementum. Sed euismod tortor a velit rhoncus, sed vulputate diam efficitur. Etiam ut mauris non purus scelerisque convallis. Aliquam facilisis tortor diam, sed accumsan dolor porttitor ut.</p>
+        </section>
+
+        <section id="secao3">
+            <h2 class="titulo-sticky">Seção 3: Conclusão e Próximos Passos</h2>
+            
+            <p>Phasellus auctor tellus nisl, ut imperdiet felis consequat eget. Cras sodales elementum accumsan. Sed in dictum magna. Sed in porta elit. Suspendisse consequat nulla vel risus porttitor porta. Sed non ex ac massa hendrerit tincidunt vel sed diam.</p>
+            <p>Donec eget nunc vel velit aliquet hendrerit. Etiam id felis pulvinar, accumsan tortor a, pellentesque risus. Sed non hendrerit est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris efficitur est a tellus pellentesque rhoncus.</p>
+            <p>Aenean elementum tempor nisl, tincidunt varius sapien tempor in. Vivamus congue, ex non tristique tristique, nunc eros elementum sapien, sit amet placerat est enim tempor felis. Duis a sem elementum, eleifend nisl nec, pretium turpis. Sed ut erat magna. Quisque volutpat dolor id convallis sollicitudin.</p>
+        </section>
+
+    </main>
+
+    <a href="#topo" class="btn-topo" aria-label="Voltar ao topo">▲</a>
+
+</body>
+</html>

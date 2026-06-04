@@ -1,0 +1,252 @@
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background-color: #0f172a;
+  color: #cbd5e1;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.4);
+}
+
+section {
+  background-color: #1e293b;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #f8fafc;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 12px;
+  margin-top: 0;
+}
+
+ul, ol {
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+form {
+  max-width: 400px;
+}
+
+form label {
+  display: block;
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 6px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background-color: #0f172a;
+  color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+form button {
+  display: block;
+  margin-top: 24px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4f46e5;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#sec-atributo a[href^="https"] {
+  color: #34d399;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#sec-atributo a[href^="http://"] {
+  color: #f87171;
+}
+
+#sec-atributo a[href^="http://"]::after {
+  content: " ⚠";
+  font-weight: bold;
+}
+
+#sec-atributo a[href$=".pdf"] {
+  color: #fb923c;
+}
+
+#sec-atributo a[href$=".pdf"]::after {
+  content: " [PDF]";
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+#sec-atributo a[href^="#"] {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+#sec-atributo a[target="_blank"]::after {
+  content: " ↗";
+}
+
+#sec-estrutural ol li {
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+#sec-estrutural ol li:first-child {
+  font-weight: bold;
+  color: #f8fafc;
+}
+
+#sec-estrutural ol li:last-child {
+  color: #c084fc;
+}
+
+#sec-estrutural ol li:nth-child(even) {
+  background-color: #1e293b;
+}
+
+#sec-estrutural ol li:nth-child(odd) {
+  background-color: #0f172a;
+}
+
+#sec-estrutural ol li:nth-child(3) {
+  border-left: 4px solid #f87171;
+  padding-left: 10px;
+}
+
+#sec-estado input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+#sec-estado input:disabled {
+  background-color: #334155;
+  cursor: not-allowed;
+  border-color: #475569;
+  color: #64748b;
+}
+
+#sec-estado input:required {
+  border-left: 4px solid #6366f1;
+}
+
+#sec-estado input:valid {
+  border-color: #34d399;
+}
+
+#sec-estado input:invalid {
+  border-color: #f87171;
+}
+
+#sec-estado input[type="checkbox"]:checked + .label-texto {
+  font-weight: bold;
+  color: #34d399;
+}
+
+#sec-estado button:hover {
+  background-color: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.citacao::before {
+  content: "“";
+  font-size: 2.5rem;
+  color: #38bdf8;
+  line-height: 0;
+  vertical-align: -0.6rem;
+  margin-right: 6px;
+  font-family: serif;
+}
+
+.citacao::after {
+  content: "”";
+  font-size: 2.5rem;
+  color: #38bdf8;
+  line-height: 0;
+  vertical-align: -0.6rem;
+  margin-left: 6px;
+  font-family: serif;
+}
+
+.obrigatorio::after {
+  content: " *";
+  color: #f87171;
+  font-weight: bold;
+}
+
+::selection {
+  background-color: #f59e0b;
+  color: #000;
+}
+
+.input-custom {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.input-custom::placeholder {
+  color: #64748b;
+  font-style: italic;
+}
+
+#sec-combinadores h3 + p {
+  font-size: 1.2rem;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+#sec-combinadores li:not(.ativo) {
+  opacity: 0.4;
+}
+
+#sec-combinadores li.ativo {
+  font-weight: 600;
+  list-style-type: none;
+  position: relative;
+  left: -15px;
+  color: #34d399;
+}
+
+#sec-combinadores li.ativo::before {
+  content: "✔ ";
+  color: #34d399;
+}
